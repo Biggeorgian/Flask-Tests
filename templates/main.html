@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Simple Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg site-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Flask-ის ტესტი</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">მთავარი</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/multiply/5/10/2/3">გამრავლება</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/json">JSON</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/name/ბექა">მისალმება</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/404">შეცდომის გვერდი</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content container">
+        <div class="content-wrapper">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 - ჩემი პირველი Flask პროექტი</p>
+        </div>
+    </footer>
+</body>
+</html>
